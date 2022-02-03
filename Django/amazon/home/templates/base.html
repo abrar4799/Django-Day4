@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     {% load static %}
+     <link href="{%static 'css/home.css'%}" rel="stylesheet" >
+</head>
+<body>
+       <a href="contactus">Contact us</a>
+       <a href="about">About </a>
+        <a href="register">register</a>
+        <a href="login">log in</a>
+       <a href="selectedusers">students</a>
+        <a href="studentaddView">add student form</a>
+       <a href="tracksView">tracksView</a>
+       <a href="insertstudentFormModel">Rigister Form Model</a>
+       <a href="{%url 'studentlist' %}">student list</a>
+        {%block content %}
+
+         {%endblock%}
+</body>
+</html>

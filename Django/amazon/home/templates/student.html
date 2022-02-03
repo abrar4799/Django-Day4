@@ -1,0 +1,41 @@
+{%  extends 'base.html'  %}
+ {%block content %}
+<br><br>
+
+    <table align="center">
+     <tr>
+       <td>
+        ID
+       </td>
+        <td>
+        Name
+       </td>
+      <td>
+        Action
+       </td>
+     </tr>
+      {%for s in student%}
+       <tr>
+         <td>
+           {{s.id}}
+         </td>
+        <td>
+            {{s.userName}}
+         </td>
+       <td>
+       <a href="{%url 'delete' s.id%}">delete </a><a href="#"> Update</a>
+        </td>
+
+      </tr>
+   {%endfor%}
+      <td>
+          <br>
+           <form method="post">
+             {%csrf_token%}
+          <input type="text" value="" name="search">
+          <input type="submit" value="search" href="search">
+       </form>
+        </td>
+    </table>
+
+{%endblock%}

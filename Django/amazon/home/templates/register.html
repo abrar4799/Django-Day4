@@ -1,0 +1,15 @@
+{%  extends 'base.html'  %}
+
+   {% block content %}
+ <br> <br>
+  <form method="post">
+    {%csrf_token%}
+  <label>user name:</label> <input type="text" name="userName" value=""> <br>
+<label>password:</label> <input type="password" name="password2" value=""> <br>
+  <label>Email:</label> <input type="email" name="email" value=""> <br>
+      <label>track:</label> <input type="text" name="track" value=""> <br>
+ <input type="submit" value="Submit"><br>
+    </form>
+     {{ID}}
+
+   {%endblock%}
